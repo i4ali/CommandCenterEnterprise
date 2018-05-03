@@ -52,6 +52,8 @@ WebUI.verifyElementPresent(findTestObject('Page_COBAN COMMAND Center Auto Export
 
 WebUI.click(findTestObject('Page_COBAN COMMAND Center Auto Export/input_update-button'))
 
+WebUI.waitForElementPresent(findTestObject('Page_COBAN COMMAND Center Auto Export/p_The server was successfully'), 10)
+
 WebUI.verifyOptionPresentByValue(findTestObject('Page_COBAN COMMAND Center Auto Export/select_DailyWeekly'), 'Weekly', true, 
     30)
 
