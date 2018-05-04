@@ -24,38 +24,35 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://cbsccube9:803/#/login')
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), '4777')
+WebUI.setText(findTestObject('null'), '4777')
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), '123')
+WebUI.setText(findTestObject('null'), '123')
 
-WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('null'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Servers'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Servers'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Sub'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Open'))
+WebUI.click(findTestObject('null'))
 
-WebUI.verifyElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleTask/a_Scheduled Tasks'), 30)
+WebUI.waitForPageLoad(10)
 
-WebUI.scrollToElement(findTestObject('Page_COBAN COMMAND Center ScheduleTask/a_Scheduled Tasks'), 30)
+WebUI.clearText(findTestObject('Page_COBAN COMMAND Center ServerGeneral/input_serverAlias'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center ScheduleTask/a_Scheduled Tasks'))
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center ServerGeneral/input_serverAlias'), 'test')
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/a_Auto Export'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center ServerGeneral/input'))
 
-WebUI.selectOptionByValue(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 'Weekly', true)
+WebUI.waitForElementPresent(findTestObject('Page_COBAN COMMAND Center ServerGeneral/p_The server was successfully'), 10)
 
-WebUI.verifyElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_update-button'), 30)
+WebUI.refresh()
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_update-button'))
+result = WebUI.getText(findTestObject('Page_COBAN COMMAND Center ServerGeneral/span_Server test'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/p_The server was successfully'), 10)
-
-WebUI.verifyOptionPresentByValue(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 'Weekly', true, 
-    30)
+WebUI.verifyTextPresent(result, false)
 
 WebUI.closeBrowser()
 

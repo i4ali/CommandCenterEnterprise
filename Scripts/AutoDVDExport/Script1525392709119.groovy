@@ -30,32 +30,21 @@ WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), 
 
 WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Servers'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Officer Dashboard'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Servers'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center Uploaded Videos/img_uiafter'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Sub'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center Uploaded Videos/a_Open'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Open'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center AutoDVDExport/a_Export'))
 
-WebUI.verifyElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleTask/a_Scheduled Tasks'), 30)
+WebUI.selectOptionByValue(findTestObject('Page_COBAN COMMAND Center AutoDVDExport/select_Local'), 'AutoDVD', true)
 
-WebUI.scrollToElement(findTestObject('Page_COBAN COMMAND Center ScheduleTask/a_Scheduled Tasks'), 30)
+WebUI.selectOptionByValue(findTestObject('Page_COBAN COMMAND Center AutoDVDExport/select_-- Select a server --'), '3', true)
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center ScheduleTask/a_Scheduled Tasks'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center AutoDVDExport/a_Submit for Export'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/a_Auto Export'))
-
-WebUI.selectOptionByValue(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 'Weekly', true)
-
-WebUI.verifyElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_update-button'), 30)
-
-WebUI.click(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_update-button'))
-
-WebUI.waitForElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/p_The server was successfully'), 10)
-
-WebUI.verifyOptionPresentByValue(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 'Weekly', true, 
-    30)
+WebUI.waitForElementPresent(findTestObject('Page_COBAN COMMAND Center AutoDVDExport/p_AutoDVD export request succe'), 10)
 
 WebUI.closeBrowser()
 

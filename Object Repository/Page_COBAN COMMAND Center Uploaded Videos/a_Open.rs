@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Open</name>
+   <tag></tag>
+   <elementGuidId>67fa5856-230f-48e5-a23c-603f2186ba16</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-primary btn-xs</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-reflect-router-link</name>
+      <type>Main</type>
+      <value>navigator,review,Upload,b5025c</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>#/dashboard/home/navigator/review/Upload/b5025c34-3011-48a8-a45d-16de2fffbc6e</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Open</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;ui1&quot;)/div[@class=&quot;show-latest clipped&quot;]/c3-recent-video[1]/div[1]/div[@id=&quot;latest&quot;]/div[@class=&quot;row&quot;]/ul[@class=&quot;grid list-item&quot;]/li[@class=&quot;col ui-list&quot;]/div[@class=&quot;table-responsive&quot;]/table[@id=&quot;video-list&quot;]/tbody[1]/tr[1]/td[12]/a[@class=&quot;btn btn-primary btn-xs&quot;]</value>
+   </webElementProperties>
+</WebElementEntity>

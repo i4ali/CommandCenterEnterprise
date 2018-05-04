@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>img</name>
+   <tag></tag>
+   <elementGuidId>8752d817-eed7-4e4e-977d-7e367139b0ef</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>img</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>assets/images/icons/play.png</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;ui1&quot;)/div[@class=&quot;show-latest clipped&quot;]/c3-recent-video[1]/div[1]/div[@id=&quot;latest&quot;]/div[@class=&quot;row&quot;]/ul[@class=&quot;grid list-item&quot;]/li[@class=&quot;col ui-list-con col-5&quot;]/c3-video[1]/div[@class=&quot;lazyload video-image&quot;]/a[1]/img[1]</value>
+   </webElementProperties>
+</WebElementEntity>

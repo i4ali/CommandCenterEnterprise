@@ -23,25 +23,25 @@ WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), 
 
 WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center After Login/span_Users'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Users'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Add User/a_Add User'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center AddUser/a_Add User'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Add User/input_firstNameAdd'), 'tester1')
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center AddUser/input_firstNameAdd'), 'tester1')
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Add User/input_lastNameAdd'), 'tester2')
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center AddUser/input_lastNameAdd'), 'tester2')
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Add User/input_emailAdd'), 'tester@test1.com')
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center AddUser/input_emailAdd'), 'tester@test1.com')
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Add User/input_officerIdAdd'), '1012')
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center AddUser/input_officerIdAdd'), '1012')
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Add User/input_passwordOfficerAdd'), '123')
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center AddUser/input_passwordOfficerAdd'), '123')
 
-WebUI.check(findTestObject('Page_COBAN COMMAND Center Add User/input_userActive'))
+WebUI.check(findTestObject('Page_COBAN COMMAND Center AddUser/input_userActive'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Add User/Create_User_Button'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center AddUser/Create_User_Button'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Add User/p_The user was successfully sa'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center AddUser/p_The user was successfully sa'))
 
 WebUI.closeBrowser()
 
