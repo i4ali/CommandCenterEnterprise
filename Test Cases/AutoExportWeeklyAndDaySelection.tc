@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Set 'weekly' and 'tuesday' for scheduled task-auto export</description>
    <name>AutoExportWeeklyAndDaySelection</name>
    <tag></tag>
    <comment></comment>

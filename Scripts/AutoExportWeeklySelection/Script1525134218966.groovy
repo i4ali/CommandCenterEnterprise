@@ -22,7 +22,9 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://cbsccube9:803/#/login')
+WebUI.navigateToUrl('http://cbsccube8:803/#/locationselect')
+
+WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
 
 WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), '4777')
 
@@ -52,10 +54,11 @@ WebUI.verifyElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleAut
 
 WebUI.click(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_update-button'))
 
-WebUI.waitForElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/p_The server was successfully'), 10)
+WebUI.waitForElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/p_The server was successfully'), 
+    10)
 
-WebUI.verifyOptionPresentByValue(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 'Weekly', true, 
-    30)
+WebUI.verifyOptionPresentByValue(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 'Weekly', 
+    true, 30)
 
 WebUI.closeBrowser()
 

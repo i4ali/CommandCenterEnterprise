@@ -4,7 +4,7 @@
    <name>TestSuite-ScheduleTaskAutoExport</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-05-06T01:14:47</lastRun>
+   <lastRun>2018-05-13T21:54:00</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>

@@ -22,7 +22,9 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://cbsccube9:803/#/login')
+WebUI.navigateToUrl('http://cbsccube8:803/#/locationselect')
+
+WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
 
 WebUI.setText(findTestObject('null'), '4777')
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify View permission is applied when Edit is given to user</description>
+   <name>GiveEditPermissionForCaseAndVerifyViewIsAlsoApplied</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>eea9f941-cb84-4d1b-bdfd-3b02e51f2a8c</testCaseGuid>
+</TestCaseEntity>

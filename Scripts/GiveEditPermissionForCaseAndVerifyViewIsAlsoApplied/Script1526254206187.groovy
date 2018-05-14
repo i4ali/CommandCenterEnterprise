@@ -22,19 +22,39 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://cbsccube8:803/#/locationselect')
+WebUI.navigateToUrl('http://cbsccube8:803/')
 
 WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), 'invalid')
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), '4777')
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), 'invalid')
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), '123')
 
-WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
 
-WebUI.verifyElementText(findTestObject('Page_COBAN COMMAND Center Login/div_Login Failed. Invalid user'), 'Login Failed. Invalid user name or password.')
+WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Officer Dashboard'))
 
-WebUI.switchToWindowTitle('COBAN COMMAND Center')
+WebUI.click(findTestObject('Page_COBAN COMMAND Center OfficerDashboard/span_Cases'))
+
+WebUI.click(findTestObject('Page_COBAN COMMAND Center Cases/span_Case TestImranEvent Type'))
+
+WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/a_ Add'))
+
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_users'), 'qaiser')
+
+WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/a_Khan Qaiser'))
+
+WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_editUsr'))
+
+WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_submit'))
+
+WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_PermissionChange'))
+
+WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/img_img-wrp'))
+
+WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_user_group'))
+
+WebUI.verifyElementChecked(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_viewUsr'), 30)
 
 WebUI.closeBrowser()
 
