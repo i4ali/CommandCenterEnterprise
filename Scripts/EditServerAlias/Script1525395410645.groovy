@@ -22,23 +22,23 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://cbsccube8:803/#/locationselect')
+WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
 WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('null'), '4777')
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
 
-WebUI.setText(findTestObject('null'), '123')
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(2, 1))
 
-WebUI.sendKeys(findTestObject('null'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('null'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Servers'))
 
-WebUI.click(findTestObject('null'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Servers'))
 
-WebUI.click(findTestObject('null'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Sub'))
 
-WebUI.click(findTestObject('null'))
+WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Open'))
 
 WebUI.waitForPageLoad(10)
 
