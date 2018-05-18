@@ -22,6 +22,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.interactions.Actions as Actions
+import org.openqa.selenium.remote.server.handler.html5.ClearLocalStorage
+
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
