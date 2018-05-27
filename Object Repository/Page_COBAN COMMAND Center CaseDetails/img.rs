@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>img</name>
+   <tag></tag>
+   <elementGuidId>714debc5-4ad6-4f40-95c7-8ee46f41bbc9</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>img</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>assets/images/icons/officer-logo.png</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/c3-app[1]/ng-component[1]/div[@class=&quot;ui-content&quot;]/div[@class=&quot;container&quot;]/c3-adm-home[1]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-6&quot;]/div[@class=&quot;admin-r22&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-6 col-sm-6 ad-home-hilight&quot;]/div[@class=&quot;ad-pn-32&quot;]/a[1]/img[1]</value>
+   </webElementProperties>
+</WebElementEntity>
