@@ -17,5 +17,5 @@ Automation project using Katalon Studio for an in-house developed application ca
 12) SuccessfulLogin
 13) UnsuccessfulLogin
 
-# Helper functionas supported
+# Helper functions supported
 1) Click Using JavaScript
