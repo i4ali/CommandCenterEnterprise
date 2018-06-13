@@ -24,17 +24,17 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(2, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(2, 1))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Officer Dashboard'))
+WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Officer Dashboard'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center OfficerDashboard/span_Cases'))
+WebUI.click(findTestObject('OfficerDashboard/Page_COBAN COMMAND Center OfficerDashboard/span_Cases'))
 
 WebUI.click(findTestObject('Page_COBAN COMMAND Center Cases/span_Case TestImranEvent Type'))
 

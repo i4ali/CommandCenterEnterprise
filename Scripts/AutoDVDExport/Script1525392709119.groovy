@@ -24,29 +24,29 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(2, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(2, 1))
 
-WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Officer Dashboard'))
+WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Officer Dashboard'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Uploaded Videos/img_uiafter'))
+WebUI.click(findTestObject('OfficerDashboard/Page_COBAN COMMAND Center Uploaded Videos/img_uiafter'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Uploaded Videos/a_Open'))
+WebUI.click(findTestObject('OfficerDashboard/Page_COBAN COMMAND Center Uploaded Videos/a_Open'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center AutoDVDExport/a_Export'))
+WebUI.click(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/a_Export'))
 
-WebUI.selectOptionByValue(findTestObject('Page_COBAN COMMAND Center AutoDVDExport/select_Local'), 'AutoDVD', true)
+WebUI.selectOptionByValue(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/select_Local'), 'AutoDVD', true)
 
-WebUI.selectOptionByValue(findTestObject('Page_COBAN COMMAND Center AutoDVDExport/select_-- Select a server --'), '3', true)
+WebUI.selectOptionByValue(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/select_-- Select a server --'), '3', true)
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center AutoDVDExport/a_Submit for Export'))
+WebUI.click(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/a_Submit for Export'))
 
-WebUI.waitForElementPresent(findTestObject('Page_COBAN COMMAND Center AutoDVDExport/p_AutoDVD export request succe'), 10)
+WebUI.waitForElementPresent(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/p_AutoDVD export request succe'), 10)
 
 WebUI.closeBrowser()
 

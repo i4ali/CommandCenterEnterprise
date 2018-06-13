@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_ Add</name>
+   <name>a_Courier</name>
    <tag></tag>
-   <elementGuidId>ca1aac32-af0f-4eb5-a240-30f07e5d3bc7</elementGuidId>
+   <elementGuidId>19a7e2ce-48ff-4d20-976d-aaa93727821d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>id(&quot;expand&quot;)/c3-case-permissions[1]/div[@class=&quot;widget&quot;]/h4[1]/a[@class=&quot;add-new&quot;]</value>
+         <value>id(&quot;ui3&quot;)/div[@class=&quot;show-latest clipped&quot;]/c3-shared-evidence[1]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-6 courier shared-evidence&quot;]/a[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -22,22 +22,32 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>ng-reflect-router-link</name>
       <type>Main</type>
-      <value>add-new</value>
+      <value>navigator,sharedEvidence,Couri</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>#/dashboard/home/navigator/sharedEvidence/Courier</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>+ Add</value>
+      <value>
+            
+            Courier
+        </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;expand&quot;)/c3-case-permissions[1]/div[@class=&quot;widget&quot;]/h4[1]/a[@class=&quot;add-new&quot;]</value>
+      <value>id(&quot;ui3&quot;)/div[@class=&quot;show-latest clipped&quot;]/c3-shared-evidence[1]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-6 courier shared-evidence&quot;]/a[1]</value>
    </webElementProperties>
 </WebElementEntity>

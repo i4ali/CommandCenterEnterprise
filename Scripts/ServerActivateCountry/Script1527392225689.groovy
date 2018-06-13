@@ -24,36 +24,36 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://cbsccube8:803/#/locationselect')
 
-WebUI.selectOptionByValue(findTestObject('Page_COBAN COMMAND Center Login/select_Main ServerLocation 9Lo'), '7', true)
+WebUI.selectOptionByValue(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/select_Main ServerLocation 9Lo'), '7', true)
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Server Miscellaneous/input'))
+WebUI.click(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/input'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), '4777')
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), '4777')
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), '123')
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), '123')
 
-WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Servers'))
+WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Servers'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Miscellaneous'))
+WebUI.click(findTestObject('ServersPage/a_Miscellaneous'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Server Miscellaneous/h3_StatesProvinces'))
+WebUI.click(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/h3_StatesProvinces'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Server Miscellaneous/img'))
+WebUI.click(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/img'))
 
-WebUI.check(findTestObject('Page_COBAN COMMAND Center Server Miscellaneous/input_isActive'))
+WebUI.check(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/input_isActive'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Server Miscellaneous/input_info-wrp-submit'))
+WebUI.click(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/input_info-wrp-submit'))
 
-WebUI.waitForElementPresent(findTestObject('Page_COBAN COMMAND Center Server Miscellaneous/p_The Country was successfully'), 
+WebUI.waitForElementPresent(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/p_The Country was successfully'), 
     10)
 
 WebUI.refresh()
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Server Miscellaneous/img'))
+WebUI.click(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/img'))
 
-WebUI.verifyElementChecked(findTestObject('Page_COBAN COMMAND Center Server Miscellaneous/input_isActive'), 10)
+WebUI.verifyElementChecked(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/input_isActive'), 10)
 
 WebUI.closeBrowser()
 

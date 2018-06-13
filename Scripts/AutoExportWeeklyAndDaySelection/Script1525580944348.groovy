@@ -24,52 +24,52 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(2, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(2, 1))
 
-WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
-WebUI.verifyElementPresent(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Users'), 30)
+WebUI.verifyElementPresent(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Users'), 30)
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Servers'))
+WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Servers'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Servers'))
+WebUI.click(findTestObject('ServersPage/a_Servers'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Main'))
+WebUI.click(findTestObject('ServersPage/ServersPage/a_Main'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Servers/a_Open_Main'))
+WebUI.click(findTestObject('ServersPage/ServersPage/MainPage/a_Open_Main'))
 
-WebUI.verifyElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleTask/a_Scheduled Tasks'), 30)
+WebUI.verifyElementPresent(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
 
-WebUI.scrollToElement(findTestObject('Page_COBAN COMMAND Center ScheduleTask/a_Scheduled Tasks'), 30)
+WebUI.scrollToElement(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center ScheduleTask/a_Scheduled Tasks'))
+WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/a_Auto Export'))
+WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/a_Auto Export'))
 
-WebUI.selectOptionByValue(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 'Weekly', true)
+WebUI.selectOptionByValue(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 'Weekly', true)
 
-WebUI.verifyElementPresent(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 30)
+WebUI.verifyElementPresent(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 30)
 
-CustomKeywords.'helpers.JavaScriptExecution.clickUsingJS'(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 
+CustomKeywords.'helpers.JavaScriptExecution.clickUsingJS'(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 
     30)
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_update-button'))
+WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_update-button'))
 
-value = WebUI.getAttribute(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 'ng-reflect-model')
+value = WebUI.getAttribute(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 'ng-reflect-model')
 
-WebUI.verifyElementAttributeValue(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 'ng-reflect-model', 
+WebUI.verifyElementAttributeValue(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 'ng-reflect-model', 
     value, 30)
 
 WebUI.refresh()
 
-WebUI.verifyOptionPresentByValue(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 'Weekly', 
+WebUI.verifyOptionPresentByValue(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 'Weekly', 
     true, 30)
 
-WebUI.verifyElementAttributeValue(findTestObject('Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 'ng-reflect-model', 
+WebUI.verifyElementAttributeValue(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 'ng-reflect-model', 
     value, 30)
 
 WebUI.closeBrowser()

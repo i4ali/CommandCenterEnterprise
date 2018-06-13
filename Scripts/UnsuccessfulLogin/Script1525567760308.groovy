@@ -24,15 +24,15 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(4, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(4, 1))
 
-WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
-WebUI.verifyElementText(findTestObject('Page_COBAN COMMAND Center Login/div_Login Failed. Invalid user'), 'Login Failed. Invalid user name or password.')
+WebUI.verifyElementText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/div_Login Failed. Invalid user'), 'Login Failed. Invalid user name or password.')
 
 WebUI.switchToWindowTitle('COBAN COMMAND Center')
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_ Add</name>
+   <name>a_Scheduled Tasks</name>
    <tag></tag>
-   <elementGuidId>ca1aac32-af0f-4eb5-a240-30f07e5d3bc7</elementGuidId>
+   <elementGuidId>bdbf7ebc-efd4-4a86-b48a-ed4222cc8ce2</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>id(&quot;expand&quot;)/c3-case-permissions[1]/div[@class=&quot;widget&quot;]/h4[1]/a[@class=&quot;add-new&quot;]</value>
+         <value>id(&quot;scheduled-tasks-target&quot;)</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -22,22 +22,30 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>data-target</name>
       <type>Main</type>
-      <value>add-new</value>
+      <value>#TMScheduledTasks</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>scheduled-tasks-target</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>contains</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>+ Add</value>
+      <value>Scheduled Tasks
+                    </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;expand&quot;)/c3-case-permissions[1]/div[@class=&quot;widget&quot;]/h4[1]/a[@class=&quot;add-new&quot;]</value>
+      <value>id(&quot;scheduled-tasks-target&quot;)</value>
    </webElementProperties>
 </WebElementEntity>

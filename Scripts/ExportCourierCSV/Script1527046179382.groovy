@@ -26,25 +26,25 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://cbsccube8:803/#/locationselect')
 
-WebUI.selectOptionByValue(findTestObject('Page_COBAN COMMAND Center Login/select_Main ServerLocation 9Lo'), '7', true)
+WebUI.selectOptionByValue(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/select_Main ServerLocation 9Lo'), '7', true)
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), '4777')
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), '4777')
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), '123')
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), '123')
 
-WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Officer Dashboard'))
+WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Officer Dashboard'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center OfficerDashboard/a_Courier'))
+WebUI.click(findTestObject('OfficerDashboard/Page_COBAN COMMAND Center OfficerDashboard/a_Courier'))
 
-WebUI.waitForElementPresent(findTestObject('Page_COBAN COMMAND Center Courier/courier_table'), 30)
+WebUI.waitForElementPresent(findTestObject('CourierPage/Page_COBAN COMMAND Center Courier/courier_table'), 30)
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Courier/input_ch1'))
+WebUI.click(findTestObject('CourierPage/Page_COBAN COMMAND Center Courier/input_ch1'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Courier/input_expbtn'))
+WebUI.click(findTestObject('CourierPage/Page_COBAN COMMAND Center Courier/input_expbtn'))
 
 'Define Custom Path where file needs to be downloaded'
 String downloadPath = 'C:\\temp'

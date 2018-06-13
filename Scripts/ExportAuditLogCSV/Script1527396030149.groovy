@@ -25,19 +25,19 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://cbsccube8:803/#/locationselect')
 
-WebUI.selectOptionByValue(findTestObject('Page_COBAN COMMAND Center Login/select_Main ServerLocation 9Lo'), '7', true)
+WebUI.selectOptionByValue(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/select_Main ServerLocation 9Lo'), '7', true)
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_UserName'), '4777')
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), '4777')
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), '123')
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), '123')
 
-WebUI.sendKeys(findTestObject('Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center AfterLogin/span_Officer Dashboard'))
+WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Officer Dashboard'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center OfficerDashboard/span_Cases'))
+WebUI.click(findTestObject('OfficerDashboard/Page_COBAN COMMAND Center OfficerDashboard/span_Cases'))
 
 WebUI.click(findTestObject('Page_COBAN COMMAND Center Cases/span_Case TestImranEvent Type'))
 
