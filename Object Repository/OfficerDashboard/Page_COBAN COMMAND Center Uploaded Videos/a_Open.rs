@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>id(&quot;ui1&quot;)/div[@class=&quot;show-latest clipped&quot;]/c3-recent-video[1]/div[1]/div[@id=&quot;latest&quot;]/div[@class=&quot;row&quot;]/ul[@class=&quot;grid list-item&quot;]/li[@class=&quot;col ui-list&quot;]/div[@class=&quot;table-responsive&quot;]/table[@id=&quot;video-list&quot;]/tbody[1]/tr[1]/td[12]/a[@class=&quot;btn btn-primary btn-xs&quot;]</value>
+         <value>//*[@id=&quot;openexport&quot; and @class=&quot;ui-btn&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -52,6 +52,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;ui1&quot;)/div[@class=&quot;show-latest clipped&quot;]/c3-recent-video[1]/div[1]/div[@id=&quot;latest&quot;]/div[@class=&quot;row&quot;]/ul[@class=&quot;grid list-item&quot;]/li[@class=&quot;col ui-list&quot;]/div[@class=&quot;table-responsive&quot;]/table[@id=&quot;video-list&quot;]/tbody[1]/tr[1]/td[12]/a[@class=&quot;btn btn-primary btn-xs&quot;]</value>
+      <value>//*[@id=&quot;openexport&quot; and @class=&quot;ui-btn&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

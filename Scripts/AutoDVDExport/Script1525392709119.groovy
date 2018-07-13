@@ -24,29 +24,39 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
+WebUI.waitForAngularLoad(30)
+
 WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
+        1, 1))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(2, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
+        2, 1))
 
 WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
 WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Officer Dashboard'))
 
+WebUI.waitForAngularLoad(30)
+
 WebUI.click(findTestObject('OfficerDashboard/Page_COBAN COMMAND Center Uploaded Videos/img_uiafter'))
 
-WebUI.click(findTestObject('OfficerDashboard/Page_COBAN COMMAND Center Uploaded Videos/a_Open'))
+WebUI.waitForAngularLoad(30)
 
 WebUI.click(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/a_Export'))
 
+WebUI.waitForAngularLoad(30)
+
 WebUI.selectOptionByValue(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/select_Local'), 'AutoDVD', true)
 
-WebUI.selectOptionByValue(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/select_-- Select a server --'), '3', true)
+WebUI.selectOptionByLabel(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/select_-- Select a server --'), 
+    '2000i Rimage', false)
 
 WebUI.click(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/a_Submit for Export'))
 
-WebUI.waitForElementPresent(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/p_AutoDVD export request succe'), 10)
+WebUI.waitForElementPresent(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/p_AutoDVD export request succe'), 
+    10)
 
 WebUI.closeBrowser()
 

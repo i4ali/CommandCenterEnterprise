@@ -7,20 +7,21 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//img[@class = 'uiafter']</value>
+         <value>//*[@id=&quot;latest&quot;]/div/ul/li[3]/c3-video/div[2]/a/img
+</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
@@ -34,10 +35,11 @@
       <value>assets/images/icons/list1.png</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;ui1&quot;]/div/c3-recent-video/div/div[2]/ul/li[4]/a</value>
+      <value>//*[@id=&quot;latest&quot;]/div/ul/li[3]/c3-video/div[2]/a/img
+</value>
    </webElementProperties>
 </WebElementEntity>

@@ -22,13 +22,16 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
+'Needs a case before this can be executed'
 WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
 WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
+        1, 1))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(2, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
+        2, 1))
 
 WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
@@ -40,7 +43,8 @@ WebUI.click(findTestObject('Page_COBAN COMMAND Center Cases/span_Case TestImranE
 
 WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/a_ Add'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_users'), findTestData('PermissionUser').getValue(1, 1))
+WebUI.setText(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_users'), findTestData('PermissionUser').getValue(
+        1, 1))
 
 WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/a_Khan Qaiser'))
 

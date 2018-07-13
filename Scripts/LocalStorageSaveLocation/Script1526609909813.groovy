@@ -24,7 +24,8 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
-WebUI.selectOptionByValue(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/select_Main ServertestLocation'), '7', true)
+WebUI.selectOptionByLabel(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/select_Main ServertestLocation'), findTestData(
+        'WebURL').getValue(2, 1), false)
 
 WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 

@@ -4,10 +4,16 @@
    <name>a_Export</name>
    <tag></tag>
    <elementGuidId>3852bb6a-9bec-4b23-b05c-028cacbf51ce</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;openexport&quot; and @class=&quot;ui-btn&quot;]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -21,24 +27,24 @@
       <value>ui-btn</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
       <value>openexport</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>Export</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;player&quot;)/div[@class=&quot;video-controls&quot;]/ul[1]/li[2]/a[@id=&quot;openexport&quot;]</value>
+      <value>//*[@id=&quot;openexport&quot; and @class=&quot;ui-btn&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

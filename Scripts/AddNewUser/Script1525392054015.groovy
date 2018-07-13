@@ -17,25 +17,35 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
+WebUI.waitForAngularLoad(30)
+
 WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(1, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
+        1, 1))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(2, 1))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
+        2, 1))
 
 WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+
+WebUI.waitForAngularLoad(30)
 
 WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Users'))
 
 WebUI.click(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/a_Add User'))
 
-WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_firstNameAdd'), findTestData('AddNewUser').getValue(1, 1))
+WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_firstNameAdd'), findTestData('AddNewUser').getValue(
+        1, 1))
 
-WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_lastNameAdd'), findTestData('AddNewUser').getValue(2, 1))
+WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_lastNameAdd'), findTestData('AddNewUser').getValue(
+        2, 1))
 
-WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_emailAdd'), findTestData('AddNewUser').getValue(3, 1))
+WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_emailAdd'), findTestData('AddNewUser').getValue(
+        3, 1))
 
-WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_officerIdAdd'), findTestData('AddNewUser').getValue(4, 1))
+WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_officerIdAdd'), findTestData('AddNewUser').getValue(
+        4, 1))
 
 WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_passwordOfficerAdd'), findTestData('AddNewUser').getValue(
         5, 1))

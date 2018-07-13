@@ -22,15 +22,16 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://cbsccube8:803/#/locationselect')
+'Test not valid'
+WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
-WebUI.selectOptionByValue(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/select_Main ServerLocation 9Lo'), '7', true)
+WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.click(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/input'))
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
+        1, 1))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), '4777')
-
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), '123')
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
+        2, 1))
 
 WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 
@@ -53,7 +54,8 @@ WebUI.refresh()
 
 WebUI.click(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/img'))
 
-WebUI.verifyElementChecked(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/input_isActive'), 10)
+WebUI.verifyElementChecked(findTestObject('ServersPage/MiscellaneousPage/Page_COBAN COMMAND Center Server Miscellaneous/input_isActive'), 
+    10)
 
 WebUI.closeBrowser()
 

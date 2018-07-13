@@ -24,15 +24,15 @@ import org.testng.Assert as Assert
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://cbsccube8:803/#/locationselect')
-
-WebUI.selectOptionByValue(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/select_Main ServerLocation 9Lo'), '7', true)
+WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
 
 WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), '4777')
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
+        1, 1))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), '123')
+WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
+        2, 1))
 
 WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
 

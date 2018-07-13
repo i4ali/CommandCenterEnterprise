@@ -44,6 +44,8 @@ WebUI.verifyElementPresent(findTestObject('ServersPage/ServersPage/ServerConfig/
 
 WebUI.scrollToElement(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
 
+WebUI.waitForElementVisible(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
+
 WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'))
 
 WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/a_Auto Export'))

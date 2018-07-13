@@ -4,6 +4,12 @@
    <name>select_Main ServertestLocation</name>
    <tag></tag>
    <elementGuidId>5c7edeeb-4e3d-4349-90ec-25b0074944bd</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//select[@name = 'selectedServer']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -42,7 +48,7 @@
       <value>ng-untouched ng-valid ng-dirty</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>

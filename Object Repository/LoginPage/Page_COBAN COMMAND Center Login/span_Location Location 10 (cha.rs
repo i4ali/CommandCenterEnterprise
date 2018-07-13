@@ -4,6 +4,12 @@
    <name>span_Location Location 10 (cha</name>
    <tag></tag>
    <elementGuidId>2a7aa8ea-0b36-4d3d-86bd-383b2ab1c3d5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//span[(contains(text(), 'Location: ') or contains(., 'Location: '))]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -15,10 +21,10 @@
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
+      <matchCondition>contains</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Location: Location 10 (change)</value>
+      <value>Location: </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
