@@ -21,69 +21,58 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 'test case not working'
-WebUI.openBrowser('')
 
-WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
+WebUI.callTestCase(findTestCase('SuccessfulLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
+WebUI.verifyElementPresent(findTestObject('HomePage/span_Users'), 30)
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
-        1, 1))
+WebUI.click(findTestObject('HomePage/span_Servers'))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
-        2, 1))
+WebUI.click(findTestObject('HomePage/ServersPage/a_Servers'))
 
-WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/a_Main'))
 
-WebUI.verifyElementPresent(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Users'), 30)
-
-WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Servers'))
-
-WebUI.click(findTestObject('ServersPage/a_Servers'))
-
-WebUI.click(findTestObject('ServersPage/ServersPage/a_Main'))
-
-WebUI.click(findTestObject('ServersPage/ServersPage/MainPage/a_Open_Main'))
+WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/MainPage/a_Open_Main'))
 
 WebUI.waitForAngularLoad(30)
 
-WebUI.verifyElementPresent(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
+WebUI.verifyElementPresent(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
 
-WebUI.scrollToElement(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
+WebUI.scrollToElement(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
 
-WebUI.waitForElementVisible(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
+WebUI.waitForElementVisible(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
 
-WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'))
+WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'))
 
-WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/a_Auto Export'))
+WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/a_Auto Export'))
 
-WebUI.selectOptionByValue(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 
+WebUI.selectOptionByValue(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 
     'Weekly', true)
 
-WebUI.verifyElementPresent(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 
+WebUI.verifyElementPresent(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 
     30)
 
-WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_update-button'))
+WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_update-button'))
 
-WebUI.verifyElementChecked(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 
+WebUI.verifyElementChecked(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 
     30)
 
 WebUI.refresh()
 
-WebUI.verifyElementPresent(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
+WebUI.verifyElementPresent(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
 
-WebUI.scrollToElement(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
+WebUI.scrollToElement(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
 
-WebUI.waitForElementVisible(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
+WebUI.waitForElementVisible(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'), 30)
 
-WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'))
+WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/a_Scheduled Tasks'))
 
-WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/a_Auto Export'))
+WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/a_Auto Export'))
 
-WebUI.verifyOptionPresentByValue(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 
+WebUI.verifyOptionPresentByValue(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/select_DailyWeekly'), 
     'Weekly', true, 30)
 
-WebUI.verifyElementChecked(findTestObject('ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 
+WebUI.verifyElementChecked(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/ScheduledTasks/Page_COBAN COMMAND Center ScheduleAutoExport/input_daySelected  2'), 
     30)
 
 WebUI.closeBrowser()

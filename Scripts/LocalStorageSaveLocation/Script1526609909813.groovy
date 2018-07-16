@@ -20,36 +20,21 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('SuccessfulLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
+WebUI.click(findTestObject('HomePage/img_lock'))
 
-WebUI.selectOptionByLabel(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/select_Main ServertestLocation'), findTestData(
-        'WebURL').getValue(2, 1), false)
-
-WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
-
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
-        1, 1))
-
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
-        2, 1))
-
-WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
-
-WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/img_lock'))
-
-WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/a_Logout'))
+WebUI.click(findTestObject('HomePage/a_Logout'))
 
 WebUI.refresh()
 
-WebUI.verifyElementPresent(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/span_Location Location 10 (cha'), 30)
+WebUI.verifyElementPresent(findTestObject('LoginPage/span_Location Location 10 (cha'), 30)
 
 WebUI.executeJavaScript('localStorage.clear()', [])
 
 WebUI.refresh()
 
-WebUI.verifyElementPresent(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/div_Select a location'), 30)
+WebUI.verifyElementPresent(findTestObject('LoginPage/div_Select a location'), 30)
 
 WebUI.closeBrowser()
 

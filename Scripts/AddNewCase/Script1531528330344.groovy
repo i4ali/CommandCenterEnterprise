@@ -19,55 +19,49 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.testng.Assert as Assert
 
 WebUI.callTestCase(findTestCase('SuccessfulLogin'), [:], FailureHandling.STOP_ON_FAILURE)
+
+//WebUI.openBrowser('')
+
+//WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
+
+//WebUI.waitForAngularLoad(30)
+
+//WebUI.click(findTestObject('LoginPage/input'))
+
+//WebUI.setText(findTestObject('LoginPage/input_UserName'), findTestData('LoginCredentials').getValue(
+        //1, 1))
+
+//WebUI.setText(findTestObject('LoginPage/input_Password'), findTestData('LoginCredentials').getValue(
+        //2, 1))
+
+//WebUI.sendKeys(findTestObject('LoginPage/input_Password'), Keys.chord(Keys.ENTER))
 
 WebUI.click(findTestObject('HomePage/span_Officer Dashboard'))
 
 WebUI.click(findTestObject('HomePage/OfficerDashboardPage/span_Cases'))
 
-WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/span_Case Event Type'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CreateCase/a_Create Case'))
 
-WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/a_Audit Logs'))
+WebUI.setText(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CreateCase/assigned-to'), findTestData('AddNewCase').getValue(
+        1, 1))
 
-WebUI.waitForElementPresent(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/input_selectall'), 30)
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CreateCase/a_4777'))
 
-WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/input_selectall'))
+WebUI.setText(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CreateCase/input_caseName'), findTestData('AddNewCase').getValue(
+        2, 1))
 
-WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/input_expbtn'))
+WebUI.setText(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CreateCase/input_description'), findTestData('AddNewCase').getValue(
+        3, 1))
 
-'Define Custom Path where file needs to be downloaded'
-String downloadPath = 'C:\\temp'
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CreateCase/button_ddList'))
 
-'Wait for Some time so that file gets downloaded and Stored in user defined path'
-WebUI.delay(10)
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CreateCase/label_Default Event'))
 
-'Verifying the file is download in the User defined Path'
-Assert.assertTrue(isFileDownloaded(downloadPath, '.csv'), 'Failed to download Expected document')
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CreateCase/input_1'))
+
+WebUI.verifyTextPresent(findTestData('AddNewCase').getValue(2, 1), false)
 
 WebUI.closeBrowser()
-
-boolean isFileDownloaded(String downloadPath, String fileName) {
-    boolean flag = false
-
-    'Creating an object for File and passing the download Path as argument'
-    File dir = new File(downloadPath)
-
-    'Creating an Array where it will store all the files from that folder'
-    File[] dir_contents = dir.listFiles()
-
-    for (int i = 0; i < dir_contents.length; i++) {
-        println('File Name at 0 is : ' + dir_contents[i].getName())
-
-        'Verifying the file name is available in the folder '
-        if (dir_contents[i].getName().contains(fileName)) {
-            'If the file is found then it will return a value as true'
-            return flag = true
-        }
-    }
-    
-    'If the file is found then it will return a value as false'
-    return flag
-}
 

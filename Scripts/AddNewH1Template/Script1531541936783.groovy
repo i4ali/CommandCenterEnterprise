@@ -22,31 +22,21 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('SuccessfulLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('HomePage/span_Servers'))
+WebUI.click(findTestObject('HomePage/span_Templates'))
 
-WebUI.click(findTestObject('HomePage/ServersPage/a_Servers'))
+WebUI.click(findTestObject('HomePage/TemplatesPage/a_FOCUS H1'))
 
-WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/a_Sub'))
+WebUI.click(findTestObject('HomePage/TemplatesPage/a_Add Template'))
 
-WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/SubPage/a_Open'))
+WebUI.setText(findTestObject('HomePage/TemplatesPage/AddTemplate/input_templateNameAdd'), findTestData('AddNewH1Template').getValue(
+        1, 1))
 
-WebUI.scrollToElement(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/Storage/Page_COBAN COMMAND Center Storage/a_Storage'), 
-    30)
+WebUI.setText(findTestObject('HomePage/TemplatesPage/AddTemplate/input_descriptionAdd'), findTestData('AddNewH1Template').getValue(
+        2, 1))
 
-WebUI.waitForElementVisible(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/Storage/Page_COBAN COMMAND Center Storage/a_Storage'), 
-    30)
+WebUI.click(findTestObject('HomePage/TemplatesPage/AddTemplate/input_append'))
 
-WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/Storage/Page_COBAN COMMAND Center Storage/a_Storage'))
-
-WebUI.check(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/Storage/Page_COBAN COMMAND Center Storage/input_enableCloudAzureStorage'), 
-    FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/input_update'))
-
-WebUI.refresh(FailureHandling.STOP_ON_FAILURE)
-
-WebUI.verifyElementChecked(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/Storage/Page_COBAN COMMAND Center Storage/input_enableCloudAzureStorage'), 
-    30)
+WebUI.waitForElementPresent(findTestObject('HomePage/TemplatesPage/AddTemplate/p_Template saved successfully.'), 30)
 
 WebUI.closeBrowser()
 

@@ -20,45 +20,32 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('SuccessfulLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
-'Needs a case before this can be executed'
-WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
+WebUI.click(findTestObject('HomePage/span_Officer Dashboard'))
 
-WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/span_Cases'))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/span_Case Event Type'))
+
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/a_ Add'))
+
+WebUI.setText(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/input_users'), findTestData('PermissionUser').getValue(
         1, 1))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
-        2, 1))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/a_Khan Qaiser'))
 
-WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/input_editUsr'))
 
-WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Officer Dashboard'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/input_submit'))
 
-WebUI.click(findTestObject('OfficerDashboard/Page_COBAN COMMAND Center OfficerDashboard/span_Cases'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/input_PermissionChange'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center Cases/span_Case TestImranEvent Type'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/img_img-wrp'))
 
-WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/a_ Add'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/input_user_group'))
 
-WebUI.setText(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_users'), findTestData('PermissionUser').getValue(
-        1, 1))
-
-WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/a_Khan Qaiser'))
-
-WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_editUsr'))
-
-WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_submit'))
-
-WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_PermissionChange'))
-
-WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/img_img-wrp'))
-
-WebUI.click(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_user_group'))
-
-WebUI.verifyElementChecked(findTestObject('Page_COBAN COMMAND Center CaseDetails/input_viewUsr'), 30)
+WebUI.verifyElementChecked(findTestObject('HomePage/OfficerDashboardPage/CasesPage/CaseDetails/input_viewUsr'), 30)
 
 WebUI.closeBrowser()
 

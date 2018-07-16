@@ -4,6 +4,7 @@
    <name>SmokeTest</name>
    <tag></tag>
    <isRerun>false</isRerun>
+   <lastRun>2018-07-14T19:01:01</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -29,22 +30,10 @@
       <testCaseId>Test Cases/EditServerAlias</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>341b736f-9a83-453f-961e-d8669f3a8879</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/ExportAuditLogCSV</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>04e2e203-4fa9-4ecb-8a9f-ef62b6e3ed42</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/ExportCourierCSV</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>8983cfa1-d7fa-4e20-8c31-c489ed6fcbec</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/AutoExportWeeklyAndDaySelection</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a91d5dfc-c5c6-4d9b-a7c4-cca9f647924a</guid>
@@ -57,5 +46,29 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AutoDVDExport</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>81b2ff03-0932-4990-84b1-06b2626c0e64</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AddNewH1PatrolUnit</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1023ff2a-359d-4685-947f-f22e1266c6f2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AddNewCase</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>fff68a63-3ec6-40cf-8520-eacdfa554342</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AddNewH1Template</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a3b75d31-ea82-4e73-bfc1-32ba3bc75d05</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/AddNewUser</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

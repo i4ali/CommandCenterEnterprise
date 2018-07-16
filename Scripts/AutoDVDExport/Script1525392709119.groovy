@@ -20,42 +20,28 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('SuccessfulLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
-
-WebUI.waitForAngularLoad(30)
-
-WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
-
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
-        1, 1))
-
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
-        2, 1))
-
-WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
-
-WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Officer Dashboard'))
+WebUI.click(findTestObject('HomePage/span_Officer Dashboard'))
 
 WebUI.waitForAngularLoad(30)
 
-WebUI.click(findTestObject('OfficerDashboard/Page_COBAN COMMAND Center Uploaded Videos/img_uiafter'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/img_uiafter'))
 
 WebUI.waitForAngularLoad(30)
 
-WebUI.click(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/a_Export'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/VideoPage/a_Export'))
 
 WebUI.waitForAngularLoad(30)
 
-WebUI.selectOptionByValue(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/select_Local'), 'AutoDVD', true)
+WebUI.selectOptionByValue(findTestObject('HomePage/OfficerDashboardPage/VideoPage/DVDExportPage/select_Local'), 'AutoDVD', true)
 
-WebUI.selectOptionByLabel(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/select_-- Select a server --'), 
+WebUI.selectOptionByLabel(findTestObject('HomePage/OfficerDashboardPage/VideoPage/DVDExportPage/select_-- Select a server --'), 
     '2000i Rimage', false)
 
-WebUI.click(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/a_Submit for Export'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/VideoPage/DVDExportPage/a_Submit for Export'))
 
-WebUI.waitForElementPresent(findTestObject('DVDExport/Page_COBAN COMMAND Center DVDExport/p_AutoDVD export request succe'), 
+WebUI.waitForElementPresent(findTestObject('HomePage/OfficerDashboardPage/VideoPage/DVDExportPage/p_AutoDVD export request succe'), 
     10)
 
 WebUI.closeBrowser()

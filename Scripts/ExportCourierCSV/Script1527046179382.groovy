@@ -22,29 +22,17 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.testng.Assert as Assert
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('SuccessfulLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
+WebUI.click(findTestObject('HomePage/span_Officer Dashboard'))
 
-WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/a_Courier'))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
-        1, 1))
+WebUI.waitForElementPresent(findTestObject('HomePage/OfficerDashboardPage/CourierPage/courier_table'), 30)
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
-        2, 1))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CourierPage/input_ch1'))
 
-WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
-
-WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Officer Dashboard'))
-
-WebUI.click(findTestObject('OfficerDashboard/Page_COBAN COMMAND Center OfficerDashboard/a_Courier'))
-
-WebUI.waitForElementPresent(findTestObject('CourierPage/Page_COBAN COMMAND Center Courier/courier_table'), 30)
-
-WebUI.click(findTestObject('CourierPage/Page_COBAN COMMAND Center Courier/input_ch1'))
-
-WebUI.click(findTestObject('CourierPage/Page_COBAN COMMAND Center Courier/input_expbtn'))
+WebUI.click(findTestObject('HomePage/OfficerDashboardPage/CourierPage/input_expbtn'))
 
 'Define Custom Path where file needs to be downloaded'
 String downloadPath = 'C:\\temp'

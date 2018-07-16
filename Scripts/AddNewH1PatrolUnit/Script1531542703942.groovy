@@ -22,31 +22,31 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('SuccessfulLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('HomePage/span_Servers'))
+WebUI.click(findTestObject('HomePage/span_Patrol Units'))
 
-WebUI.click(findTestObject('HomePage/ServersPage/a_Servers'))
+WebUI.click(findTestObject('HomePage/PatrolUnitsPage/a_FOCUS H1'))
 
-WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/a_Sub'))
+WebUI.click(findTestObject('HomePage/PatrolUnitsPage/DeviceSpecificPage/a_Create Unit'))
 
-WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/SubPage/a_Open'))
+WebUI.setText(findTestObject('HomePage/PatrolUnitsPage/CreateUnitPage/input_patrolUnitNameAdd'), findTestData('AddNewH1PatrolUnit').getValue(
+        1, 1))
 
-WebUI.scrollToElement(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/Storage/Page_COBAN COMMAND Center Storage/a_Storage'), 
-    30)
+WebUI.setText(findTestObject('HomePage/PatrolUnitsPage/CreateUnitPage/input_descriptionAdd'), findTestData('AddNewH1PatrolUnit').getValue(
+        2, 1))
 
-WebUI.waitForElementVisible(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/Storage/Page_COBAN COMMAND Center Storage/a_Storage'), 
-    30)
+WebUI.selectOptionByValue(findTestObject('HomePage/PatrolUnitsPage/CreateUnitPage/select_template_type'), '44', 
+    true)
 
-WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/Storage/Page_COBAN COMMAND Center Storage/a_Storage'))
+WebUI.selectOptionByValue(findTestObject('HomePage/PatrolUnitsPage/CreateUnitPage/select_template'), '5', 
+    true)
 
-WebUI.check(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/Storage/Page_COBAN COMMAND Center Storage/input_enableCloudAzureStorage'), 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.selectOptionByValue(findTestObject('HomePage/PatrolUnitsPage/CreateUnitPage/select_Base Station'), '1', true)
 
-WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/input_update'))
+WebUI.click(findTestObject('HomePage/PatrolUnitsPage/CreateUnitPage/input_patrolUnitActive'))
 
-WebUI.refresh(FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('HomePage/PatrolUnitsPage/CreateUnitPage/input_append'))
 
-WebUI.verifyElementChecked(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/Storage/Page_COBAN COMMAND Center Storage/input_enableCloudAzureStorage'), 
-    30)
+WebUI.waitForElementPresent(findTestObject('HomePage/PatrolUnitsPage/CreateUnitPage/p_Saved unit succeeded unit_id'), 30)
 
 WebUI.closeBrowser()
 

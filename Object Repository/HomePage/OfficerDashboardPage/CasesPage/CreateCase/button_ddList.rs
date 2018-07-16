@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_ddList</name>
+   <tag></tag>
+   <elementGuidId>347bd3d0-c9cf-4def-83bd-2800129582bc</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>dropdown-list-button</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>ddList</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;added-cases&quot;)/c3-create-case[1]/div[@id=&quot;create-case&quot;]/div[@class=&quot;wid-1&quot;]/form[@class=&quot;ng-valid ng-dirty ng-touched&quot;]/table[1]/tbody[1]/tr[4]/td[2]/c3-dropdown-list[@id=&quot;events&quot;]/div[@id=&quot;events&quot;]/button[@id=&quot;ddList&quot;]</value>
+   </webElementProperties>
+</WebElementEntity>

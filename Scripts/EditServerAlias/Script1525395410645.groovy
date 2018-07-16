@@ -20,43 +20,34 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('SuccessfulLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
+WebUI.click(findTestObject('HomePage/span_Servers'))
 
-WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
+WebUI.click(findTestObject('HomePage/ServersPage/a_Servers'))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
-        1, 1))
+WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/a_Sub'))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
-        2, 1))
+WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/SubPage/a_Open'))
 
-WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
+WebUI.waitForElementVisible(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/input_serverAlias'), 30)
 
-WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Servers'))
+WebUI.waitForElementClickable(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/input_serverAlias'), 
+    30)
 
-WebUI.click(findTestObject('ServersPage/a_Servers'))
+WebUI.clearText(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/input_serverAlias'))
 
-WebUI.click(findTestObject('ServersPage/ServersPage/a_Sub'))
-
-WebUI.click(findTestObject('ServersPage/ServersPage/SubPage/a_Open'))
-
-WebUI.waitForElementClickable(findTestObject('ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/input_serverAlias'), 30)
-
-WebUI.clearText(findTestObject('ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/input_serverAlias'))
-
-WebUI.setText(findTestObject('ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/input_serverAlias'), 
+WebUI.setText(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/input_serverAlias'), 
     'test')
 
-WebUI.click(findTestObject('ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/input'))
+WebUI.click(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/input'))
 
-WebUI.waitForElementPresent(findTestObject('ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/p_The server was successfully'), 
+WebUI.waitForElementPresent(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/p_The server was successfully'), 
     10)
 
 WebUI.refresh()
 
-result = WebUI.getText(findTestObject('ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/span_Server test'), 
+result = WebUI.getText(findTestObject('HomePage/ServersPage/ServersPage/ServerConfig/General/Page_COBAN COMMAND Center ServerGeneral/span_Server test'), 
     FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyTextPresent(result, false)

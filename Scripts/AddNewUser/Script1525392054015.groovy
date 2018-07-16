@@ -13,48 +13,32 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('SuccessfulLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(findTestData('WebURL').getValue(1, 1))
+WebUI.click(findTestObject('HomePage/span_Users'))
 
-WebUI.waitForAngularLoad(30)
+WebUI.click(findTestObject('HomePage/UsersPage/a_Add User'))
 
-WebUI.click(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input'))
-
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_UserName'), findTestData('LoginCredentials').getValue(
+WebUI.setText(findTestObject('HomePage/UsersPage/CreateNewUserPage/input_firstNameAdd'), findTestData('AddNewUser').getValue(
         1, 1))
 
-WebUI.setText(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), findTestData('LoginCredentials').getValue(
+WebUI.setText(findTestObject('HomePage/UsersPage/CreateNewUserPage/input_lastNameAdd'), findTestData('AddNewUser').getValue(
         2, 1))
 
-WebUI.sendKeys(findTestObject('LoginPage/Page_COBAN COMMAND Center Login/input_Password'), Keys.chord(Keys.ENTER))
-
-WebUI.waitForAngularLoad(30)
-
-WebUI.click(findTestObject('HomePage/Page_COBAN COMMAND Center HomePage/span_Users'))
-
-WebUI.click(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/a_Add User'))
-
-WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_firstNameAdd'), findTestData('AddNewUser').getValue(
-        1, 1))
-
-WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_lastNameAdd'), findTestData('AddNewUser').getValue(
-        2, 1))
-
-WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_emailAdd'), findTestData('AddNewUser').getValue(
+WebUI.setText(findTestObject('HomePage/UsersPage/CreateNewUserPage/input_emailAdd'), findTestData('AddNewUser').getValue(
         3, 1))
 
-WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_officerIdAdd'), findTestData('AddNewUser').getValue(
+WebUI.setText(findTestObject('HomePage/UsersPage/CreateNewUserPage/input_officerIdAdd'), findTestData('AddNewUser').getValue(
         4, 1))
 
-WebUI.setText(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_passwordOfficerAdd'), findTestData('AddNewUser').getValue(
+WebUI.setText(findTestObject('HomePage/UsersPage/CreateNewUserPage/input_passwordOfficerAdd'), findTestData('AddNewUser').getValue(
         5, 1))
 
-WebUI.check(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/input_userActive'))
+WebUI.check(findTestObject('HomePage/UsersPage/CreateNewUserPage/input_userActive'))
 
-WebUI.click(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/Create_User_Button'))
+WebUI.click(findTestObject('HomePage/UsersPage/CreateNewUserPage/Create_User_Button'))
 
-WebUI.click(findTestObject('UsersPage/Page_COBAN COMMAND Center UsersPage/p_The user was successfully sa'))
+WebUI.waitForElementPresent(findTestObject('HomePage/UsersPage/CreateNewUserPage/p_The user was successfully sa'), 30)
 
 WebUI.closeBrowser()
 
