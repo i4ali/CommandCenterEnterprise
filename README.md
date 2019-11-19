@@ -1,7 +1,3 @@
-# CommandCenterEnterprise
-
-Automation project using Katalon Studio for an in-house developed application called Command Center Enterprise
-
 # Test Cases Supported
 1) AddNewUser
 2) AutoDVDExport
