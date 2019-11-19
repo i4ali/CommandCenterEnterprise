@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>CommandCenterEnterpriseRegression</name>
+   <name>CCRegression</name>
    <tag></tag>
    <UUID>92fa212a-5365-4a29-8a7d-0e1d61f59652</UUID>
    <migratedVersion>5.4.0</migratedVersion>
